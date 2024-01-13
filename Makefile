@@ -1,8 +1,8 @@
 all:
-	g++ -g -std=c++20 main.cpp -o main -lcrypto oqs_build/lib/liboqs.a
+	g++ -g -std=c++20 main.cpp -o passkeygen -lcrypto oqs_build/lib/liboqs.a
 
 release:
-	g++ -O3 -std=c++20 main.cpp -o main -lcrypto oqs_build/lib/liboqs.a
+	g++ -O3 -std=c++20 main.cpp -o passkeygen -lcrypto oqs_build/lib/liboqs.a
 
 oqs:
 	mkdir oqs_build;cd oqs_build;cmake ../liboqs -DOQS_USNSE_OPENSSL=OFF;make -j
