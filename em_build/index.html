@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+		<link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+		<link rel="icon" href="icon.ico" type="image/x-icon">
+
+		<link rel="stylesheet" href="w3.css">
+
+		<script src="passkeygen.js"></script>
+	</head>
+	<body>
+		<div class="w3-center w3-panel w3-padding-large w3-padding-32">
+			<div class="w3-container">
+				<div class="w3-half w3-padding-large">
+					<h3>Platform:</h3>
+					<input type="text" class="w3-input" id="platformInput">
+				</div>
+				<div class="w3-half w3-padding-large">
+					<h3>Passphrase:</h3>
+					<input type="password" class="w3-input" id="passphraseInput">
+				</div>
+				<select style="width:100px" class="w3-select w3-border" name="hashLen" id="lengthInput">
+					<option value="64">64</option>
+					<option value="32" selected=true>32</option>
+					<option value="16">16</option>
+					<option value="8">8</option>
+				</select>
+				<button class="w3-button w3-light-grey" id="computeButton">Compute Password Hash</button>
+				<button class="w3-button w3-light-grey" id="computeCopyButton">Computed and Copy to Clipboard</button>
+				<br>
+				<pre><H4 id="hashOutput"></H4></pre>
+			</div>
+		</div>
+	</body>
+	<footer class="w3-container w3-light-grey" style="position:absolute;bottom:0;">
+		<p>Using emscripten <a href="emscripten/LICENSE.txt">License</a>.  Entropy (and security) not tested! <span style="color:rgb(255,0,0);">USE AT YOUR OWN RISK!</span></p>
+	</footer>
+</html>
