@@ -23,6 +23,13 @@ release_em:
 	#SUPER JANK, but segfaults when address sanitizer is off
 	em++ -Ioqs_build/include -O3 -std=c++20 em_main.cpp passCompute.cpp -o em_build/passkeygen.js oqs_build/lib/liboqs.a WebCpp-Interaction-Lib/libInteraction.a -s WASM=1 -s EXPORTED_RUNTIME_METHODS=ccall,cwrap -s NO_EXIT_RUNTIME -fsanitize=address
 
+deploy_em:
+	make oqs_em
+	make webcpp_em
+	make release_em
+	rm -rf -f oqs_build
+	cd WebCpp-Interaction-Lib;make clean
+
 clean:
 	rm -f passkeygen
 	rm -rf -f oqs_build
