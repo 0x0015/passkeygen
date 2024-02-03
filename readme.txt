@@ -11,4 +11,7 @@ for a web build:
 clone
 make oqs_em
 make webcpp_em
-make release_em
+#release_em is theoretically better (has optimizations, no debug symbols), but isn't working right now.
+make all_em
+
+Accessess a web build here: https://0x0015.github.io/passkeygen

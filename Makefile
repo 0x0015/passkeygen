@@ -26,7 +26,8 @@ release_em:
 deploy_em:
 	make oqs_em
 	make webcpp_em
-	make release_em
+	#release_em not working for now, for whatever reason
+	make all_em
 	rm -rf -f oqs_build
 	cd WebCpp-Interaction-Lib;make clean
 
